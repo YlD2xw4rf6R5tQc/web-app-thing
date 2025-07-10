@@ -11,29 +11,23 @@
 					margin-bottom: 1rm;
 				}
 			</style>
-			<div class="container my-2"></div>
+			<div class="my-2"></div>
 		</header>
 
-		<main>
-			<div class="container">
-				<div class="card">
-          <div class="card-header bg-danger text-light text-center">Internal Server Error</div> 
-          <div class="card-body text-center">
-            <img src="https://thumbs.gfycat.com/OfficialElectricArgusfish-size_restricted.gif" class="img-fluid mt-4 mb-0 text-center">
-            <h3 class="font-light mt-4">500</h3>
-						<p class="mb-0"><i>If you see Dr. Breen, tell him I said "fuck you!" (and give him this error too)</i></p>
-						<pre class="pre-scrollable">
-							<code>
-								<p class="mb-0"><%= err %></p>
-							</code>
-						</pre>
-            <div class="mt-4">
-              <a href="/" class="btn btn-primary btn-lg">Home ›</a>
-            </div>
-          </div>
-        </div>
-			</div>
-		</main>
+                <main>
+                        <div class="container mx-auto px-4">
+                                <div class="border rounded p-4 text-center">
+                                        <div class="bg-red-500 text-white px-4 py-2 rounded">Internal Server Error</div>
+                                        <img src="https://thumbs.gfycat.com/OfficialElectricArgusfish-size_restricted.gif" class="mx-auto my-4">
+                                        <h3 class="text-xl font-light">500</h3>
+                                        <p class="mb-0"><i>If you see Dr. Breen, tell him I said \"fuck you!\" (and give him this error too)</i></p>
+                                        <pre class="overflow-auto"><code><p class="mb-0"><%= err %></p></code></pre>
+                                        <div class="mt-4">
+                                                <a href="/" class="bg-blue-500 text-white px-4 py-2 rounded">Home ›</a>
+                                        </div>
+                                </div>
+                        </div>
+                </main>
 	</div>
 	<footer class="footer">
 		<% include ../partials/footer %>

@@ -11,51 +11,31 @@
 					margin-bottom: 1rm;
 				}
 			</style>
-			<div class="container my-2"></div>
+			<div class="my-2"></div>
 		</header>
 
-		<main class="container">
-			<div class="row">
-				<div class="col-md-8 offset-md-2">
-					<div class="alert alert-primary rounded text-center">
-						<i class="fas fa-info"></i> Passwords are hashed with <code>bcrypt</code>.
-					</div>
-					<div class="card">
-						<div class="card-header">
-							<ul class="nav nav-tabs card-header-tabs">
-								<li class="nav-item">
-									<a class="nav-link active" href="#">Login</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="/api/auth/discord">Login with Discord</a>
-								</li>
-							</ul>
-						</div>
-						<div class="card-body">
-							<form action="/login" method="post">
-								<div class="form-group row">
-									<label for="username" class="col-md-3 col-form-label text-md-right"><i class="fas fa-id-card"></i> Username</label>
-									<div class="col-md-9">
-										<input type="text" class="form-control" id="username" name="username" value="" required autofocus>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="password" class="col-md-3 col-form-label text-md-right"><i class="fas fa-key"></i> Password</label>
-									<div class="col-md-9">
-										<input type="password" class="form-control" id="password" name="password" required>
-									</div>
-								</div>
-								<div class="form-group row">
-									<div class="col-md-9 offset-md-3">
-										<button type="submit" class="btn btn-primary">Login</button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main>
+                <main class="container mx-auto px-4">
+                        <div class="max-w-md mx-auto">
+                                <div class="bg-blue-100 border border-blue-300 rounded text-center p-3 mb-4">
+                                        <i class="fas fa-info"></i> Passwords are hashed with <code>bcrypt</code>.
+                                </div>
+                                <div class="bg-white shadow rounded p-4">
+                                        <form action="/login" method="post" class="space-y-4">
+                                                <div>
+                                                        <label for="username" class="block text-sm font-medium"><i class="fas fa-id-card"></i> Username</label>
+                                                        <input type="text" id="username" name="username" required autofocus class="mt-1 block w-full border rounded p-2">
+                                                </div>
+                                                <div>
+                                                        <label for="password" class="block text-sm font-medium"><i class="fas fa-key"></i> Password</label>
+                                                        <input type="password" id="password" name="password" required class="mt-1 block w-full border rounded p-2">
+                                                </div>
+                                                <div class="text-right">
+                                                        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Login</button>
+                                                </div>
+                                        </form>
+                                </div>
+                        </div>
+                </main>
 	</div>
 
 	<footer class="footer">
