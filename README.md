@@ -3,12 +3,7 @@
 Credits go to Ahe4d
 
 ## what have you got
-* Basic Bootstrap website
-* EJS templating
-* Customizable logger using Winston
-* JWT cookie based auth using Passport
-* Discord OAuth
-* More to come?
+* codex is bad tests failed use their repo 👍👍👍
 
 ## how 2 use
 * Node.js (v12)
