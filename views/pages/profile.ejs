@@ -11,23 +11,23 @@
 					margin-bottom: 1rm;
 				}
 			</style>
-			<div class="container my-2"></div>
+			<div class="my-2"></div>
 		</header>
 
 		<main>
-			<div class="container" id="app">
-				<div class="card mb-4">
-					<div class="card-body">
-						<div class="row">
-							<div class="col-md-4">
-								<img src="/img/logo.png" class="img-fluid my-2" style="display:block;max-width:200px;margin:0 auto" id="user-pic">
-							</div><div class="col-md-8">
-								<div class="row">
-									<div class="col-md-6">
+                        <div class="container mx-auto px-4" id="app">
+                                <div class="border rounded mb-4 p-4">
+                                        <div class="md:flex">
+                                                <div class="md:w-4/12 text-center">
+                                                        <img src="/img/logo.png" class="mx-auto my-2" style="max-width:200px" id="user-pic">
+                                                </div>
+                                                <div class="md:w-8/12">
+                                                        <div class="md:flex">
+                                                                <div class="md:w-6/12">
 										<h3 id="user-name"><%= user.username %></h3> 
 										<p class="mb-xs-2 mb-md-5 text-<% if (user.rank == "Admin") { %>danger<% } else if (user.rank == "Banned") { %>muted<% } else { %>primary<% } %>" id="user-rank"><strong><%= user.rank %></strong></p> 
  										<p><i class="fas fa-id-card"></i> <strong>ID:</strong> <%= user.id %><p></p>
-									</div><div class="col-md-6">
+                                                                </div><div class="md:w-6/12">
 										<h4>Information</h4>
 										<p><strong><i class="fas fa-gamepad"></i> Testing</strong></p>
 										<p>Testing</p>
@@ -35,34 +35,27 @@
 										<p><strong><i class="fab fa-discord"></i> Testing</strong></p>
 										<p>Testing</p>
 									</div>
-									<script>
-										$(document).ready(function(){
-								    		$('[data-toggle="tooltip"]').tooltip();   
-										});
+                                                                <script>
+                                                                        function copyTextToClipboard(text) {
+                                                                                var textArea = document.createElement('textarea');
+                                                                                textArea.value = text;
+                                                                                document.body.appendChild(textArea);
+                                                                                textArea.focus();
+                                                                                textArea.select();
+                                                                                try {
+                                                                                        document.execCommand('copy');
+                                                                                } catch (err) {
+                                                                                        console.error('Unable to copy', err);
+                                                                                }
+                                                                                document.body.removeChild(textArea);
+                                                                        }
 
-										function copyTextToClipboard (text) {
-											var textArea = document.createElement("textarea");
-  											textArea.value = text;
-  											document.body.appendChild(textArea);
-  											textArea.focus();
-  											textArea.select();
-									  
-											try {
-												var successful = document.execCommand('copy');
-												var msg = successful ? 'successful' : 'unsuccessful';
-												console.log('Fallback: Copying text command was ' + msg);
-											} catch (err) {
-								 				console.error('Fallback: Oops, unable to copy', err);
-											}
-											document.body.removeChild(textArea);
-										}
-
-										var copyKey = document.querySelector('.js-copy-key');
-										copyKey.addEventListener('click', function(event) {
-  											copyTextToClipboard('hi');
-  											toastNotification("Testing", "success");
-										});
-									</script>
+                                                                        var copyKey = document.querySelector('.js-copy-key');
+                                                                        copyKey.addEventListener('click', function(event) {
+                                                                                copyTextToClipboard('hi');
+                                                                                toastNotification('Testing', 'success');
+                                                                        });
+                                                                </script>
 								</div>
 							</div>
 						</div>
