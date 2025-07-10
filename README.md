@@ -1,6 +1,6 @@
 ![Logo](https://raw.githubusercontent.com/Ahe4d/web-app-thing/master/public/img/logo.png)
 # web-app-thing
-Side project for working on a rewrite of Blockauth. Feel free to use as a boilerplate.
+Credits go to Ahe4d
 
 ## what have you got
 * Basic Bootstrap website
@@ -8,6 +8,7 @@ Side project for working on a rewrite of Blockauth. Feel free to use as a boiler
 * Customizable logger using Winston
 * JWT cookie based auth using Passport
 * Discord OAuth
+* More to come?
 
 ## how 2 use
 * Node.js (v12)
@@ -19,4 +20,4 @@ Npm script | Function
 `test` | Mocha tests (unused atm)
 
 ## things to note
-At the moment I'm using CSS from [Finobe](https://finobe.com) because I'm lazy (sorry Raymonf)
+Since this is a codex testing account, most modifications will be done with codex. Sorry
